@@ -1,0 +1,3 @@
+Run this command from the root folder to generate all the need .class files apoko no karnal.
+After that, simply run the GroupChatServer and all the GroupChatClient that you want.
+javac -d Server/ Server/*.java && cd Server/ && rmic GroupChatImpl && cd .. && cd Client/ && cp ../Server/*.class . && javac *.java && rmic Messenger && cd .. && cp Server/GroupChatImpl_Stub.class Client/ && cp Client/Messenger_Stub.class Server/
