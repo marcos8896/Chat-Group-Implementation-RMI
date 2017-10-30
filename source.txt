@@ -1,0 +1,1 @@
+http://www.ejbtutorial.com/java-rmi/java-rmi-example-group-chat-implementation
