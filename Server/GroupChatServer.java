@@ -8,9 +8,9 @@ public class GroupChatServer {
 				GroupChatImpl obj=new GroupChatImpl();
                 Naming.rebind("rmi://localhost:2010/groupchat", obj);
  
-                System.out.println("[System] Chat Server is ready.");               
+                System.out.println("[System] Chat Server esta listo.");               
 	 }catch (Exception e) {
-         System.out.println("Chat Server failed: " + e);
+         System.out.println("Chat Server falló: " + e);
       }
     }
 }

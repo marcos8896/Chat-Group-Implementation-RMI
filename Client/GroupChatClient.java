@@ -12,18 +12,20 @@ public class GroupChatClient {
 		      GroupChatInterface server = (GroupChatInterface)Naming.lookup("rmi://localhost:2010/groupchat");
 		      	
 		      Scanner scanner=new Scanner(System.in);
-		      System.out.println("[System] Client Messenger is running");
-		      System.out.println("Enter a username to login and press Enter:");
+		      System.out.println("[System] Client Messenger esta corriendo.");
+		      System.out.print("Escribe tu nombre y presiona enter: ");
 		      String username = scanner.nextLine();
 		      MessengerInterface m=new Messenger(username,server);
 		      server.login(m);
-		      server.sendToAll("Just Connected",m);	
+		      server.sendToAll("Conectado" + "\n",m);	
 		      for(;;){  	
 		    	  String aa = scanner.nextLine();
-				  server.sendToAll(aa,m);				    		  				  				    	  
+          server.sendToAll(aa,m);
+		      System.out.print(username + ": ");
+          
 	    	  }
        }catch (Exception e) {
-          System.out.println("Hello Client exception: " + e);
+          System.out.println("Client Exception: " + e);
           e.printStackTrace();
        }
     }

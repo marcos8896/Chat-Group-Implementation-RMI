@@ -12,7 +12,7 @@ public class Messenger extends UnicastRemoteObject implements MessengerInterface
 	public String getUsername() throws RemoteException{
 		return username;	
 	}
-	public void tell(String s) throws RemoteException{		
-		System.out.println(s);		
+	public void tell(String s) throws RemoteException{
+		System.out.print(s);		
 	}
 }
